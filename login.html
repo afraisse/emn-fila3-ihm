@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Groupe 8 - Hadrien Gerard & Adrian Fraisse">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<title>Connection</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">EventManager</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">Login</a>
+					</li>
+	    			<li class="">
+	    				<a href="/Subscribe">Subscribe</a>
+	    			</li>
+	    		</ul>
+	    	</div>
+			
+			<!--<c:otherwise>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Evènements<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="<c:url value="/CreateEvent"/>">Créer</a></li>
+								<li class="divider"></li>
+								<li><a href="<c:url value="/MyEvents"/>">Mes évenements</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">${sessionScope.user.email} <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="<c:url value="/Logout"/>">Déconnexion</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>	
+			</c:otherwise> -->
+
+		</div>
+	</nav>
+	<div class="container">
+		<h1 class="page-header">Connexion</h1>
+		<h5>
+			Vous n'avez pas d'identifiants ? <a href="Subscribe">Cr&eacute;ez un compte.</a>
+		</h5>
+		<div class="row">
+			<form class="form-horizontal" role="form" action="" method="post">
+				<div class="form-group">
+			    	<label for="email" class="col-sm-2 control-label">Email:</label>
+			    	<div class="col-sm-3">
+			    		<input type="email" class="form-control" id="email" name="email" required="required" placeholder="Email (ex: jean.dupont@mail.fr)">
+			    	</div>
+				</div>
+				<div class="form-group">
+					<label for="pwd" class="col-sm-2 control-label">Mot de passe:</label>
+					<div class="col-sm-3">
+						<input type="password" class="form-control" id="pwd" name="pwd" required="required" placeholder="Mot de passe de connexion sur ce site">
+				    </div>
+				</div>
+				<!--<c:if test="${requestScope.badLoginOrPassword}">
+					<div class="col-sm-offset-2 col-sm-10">
+      					<font color=red>
+							L'identifiant ou le mot de passe est incorrect.
+						</font>
+    				</div>
+				</c:if>
+				<c:if test="${requestScope.errorOccured}">
+					<div class="col-sm-offset-2 col-sm-10">
+      					<font color=red>
+							Une erreur est survenue.<br>
+							<i>Vous pouvez recommencer en entrant des paramètres valides.</i>
+						</font>
+    				</div>
+				</c:if>-->
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-2">
+						<button class="btn btn-primary btn-lg" type="submit" name="Login">Se connecter</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /container -->
+</body>
+</html>
+
+
+
+
