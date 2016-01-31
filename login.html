@@ -44,7 +44,7 @@
             border: 0;
             color:white;
             background:rgba(255,255,255,0.2);
-            padding:16px;
+            padding:12px;
             font-size:18px;
         }
 
@@ -75,6 +75,13 @@
             flex: 0 0 content;
             margin-top: 20px;
             align-self: center;
+            transition:all ease 0.3s;
+        }
+
+        button:active {
+            outline:none;
+            background-color: white;
+            color: #e74c3c;
         }
 
         .content {
@@ -94,7 +101,7 @@
 	<body>
             <form role="form" method="post">
                 <fieldset>
-                    <legend>Login</legend>
+                    <legend>User login</legend>
                     <div class="content">
                         <div>
                             <label for="email">Mail</label>
